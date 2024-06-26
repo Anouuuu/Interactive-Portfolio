@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Anoushka Saha</h1>
+        <p>Aspiring Web Developer & Designer</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>An aspiring web developer and designer passionate about creating dynamic and visually engaging user experiences.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project" onclick="openModal('project1')">
+            <h3>Portfolio Website</h3>
+            <p>This interactive portfolio website showcases the work and skills of mine, an aspiring web developer and designer.</p>
+        </div>
+        <div class="project" onclick="openModal('project2')">
+            <h3>Smart Farming using Machine Learning</h3>
+            <p>This project predicts the best crop for farming based on soil parameters 
+                and weather data to mitigate farmer losses from natural disasters</p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <span>HTML</span>
+            <button onclick="rateSkill('html')">Rate</button>
+            <p id="html-rating">Rating: 0</p>
+        </div>
+        <div class="skill">
+            <span>CSS</span>
+            <button onclick="rateSkill('css')">Rate</button>
+            <p id="css-rating">Rating: 0</p>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <button onclick="rateSkill('javascript')">Rate</button>
+            <p id="javascript-rating">Rating: 0</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email : anoushkasaha2003@gmail.com</p>
+        <p>Phone : (+91) 9073106942</p>
+    </section>
+
+<div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-description">Project Description</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
